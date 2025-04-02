@@ -1,5 +1,5 @@
 import reactLogo from './assets/react-core-concepts.png';
-
+import CoreConcept from './components/CoreConcept';
 const reactDescriptions: string[] = [
   'Core',
   'Crucial',
@@ -31,6 +31,7 @@ function App() {
       <Header />
       <main>
         <h2>Time to get started!</h2>
+        <CoreConcept />
       </main>
     </div>
   );
