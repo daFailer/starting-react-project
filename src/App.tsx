@@ -30,7 +30,6 @@ function App() {
     <div>
       <Header />
       <main>
-        <h2>Time to get started!</h2>
         <CoreConcept />
       </main>
     </div>
