@@ -36,7 +36,7 @@ const coreConcepts = [
   },
 ];
 
-function CoreConcept() {
+export default function CoreConcept() {
   return (
     <section id="core-concepts">
       <h2>Core Concept</h2>
@@ -51,5 +51,3 @@ function CoreConcept() {
   </section>
   );
 }
-
-export default CoreConcept;
