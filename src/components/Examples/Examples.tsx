@@ -55,7 +55,7 @@ function Counter() {
 ];
 
 export default function Examples() {
-  const [currentSelection, setCurrentSelection]: [number, (currentSelection: number) => void] = useState(0);
+  const [currentSelection, setCurrentSelection] = useState<number | undefined>(undefined);
 
   function handleSelect(selectedLabel: number) {
     setCurrentSelection(selectedLabel);
@@ -69,19 +69,21 @@ export default function Examples() {
           <TabButton key={item.title} onSelect={() => handleSelect(index)}>{item.title}</TabButton>
         ))}
       </menu>
-      <div id="tab-content">
-        <h3>
-          {buttonConfig[currentSelection].title}
-        </h3>
-        <p>
-          {buttonConfig[currentSelection].description}
-        </p>
-        <pre>
-          <code>
-            {buttonConfig[currentSelection].code}
-          </code>
-        </pre>
-      </div>
+      {typeof currentSelection === 'undefined' || currentSelection === null ?
+        <p>Please select a topic.</p> :
+        <div id="tab-content">
+          <h3>
+            {buttonConfig[currentSelection].title}
+          </h3>
+          <p>
+            {buttonConfig[currentSelection].description}
+          </p>
+          <pre>
+            <code>
+              {buttonConfig[currentSelection].code}
+            </code>
+          </pre>
+        </div>}
     </section>
   )
 }
