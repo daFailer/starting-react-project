@@ -1,7 +1,7 @@
-import componentsImg from '../assets/components.png';
-import jsxImg from '../assets/jsx-ui.png';
-import configImg from '../assets/config.png';
-import stateImg from '../assets/state-mgmt.png';
+import componentsImg from '../../assets/components.png';
+import jsxImg from '../../assets/jsx-ui.png';
+import configImg from '../../assets/config.png';
+import stateImg from '../../assets/state-mgmt.png';
 
 import './CoreConcept.scss';
 
