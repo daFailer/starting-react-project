@@ -61,6 +61,26 @@ export default function Examples() {
     setCurrentSelection(selectedLabel);
   }
 
+  let tabContent = <p>Please select a topic.</p>
+
+  if (typeof currentSelection !== 'undefined' && currentSelection !== null) {
+    tabContent = (
+      <div id="tab-content">
+        <h3>
+          {buttonConfig[currentSelection].title}
+        </h3>
+        <p>
+          {buttonConfig[currentSelection].description}
+        </p>
+        <pre>
+          <code>
+            {buttonConfig[currentSelection].code}
+          </code>
+        </pre>
+      </div>
+    )
+  }
+
   return (
     <section id="examples">
       <h2>Examples</h2>
@@ -69,21 +89,7 @@ export default function Examples() {
           <TabButton key={item.title} onSelect={() => handleSelect(index)}>{item.title}</TabButton>
         ))}
       </menu>
-      {typeof currentSelection === 'undefined' || currentSelection === null ?
-        <p>Please select a topic.</p> :
-        <div id="tab-content">
-          <h3>
-            {buttonConfig[currentSelection].title}
-          </h3>
-          <p>
-            {buttonConfig[currentSelection].description}
-          </p>
-          <pre>
-            <code>
-              {buttonConfig[currentSelection].code}
-            </code>
-          </pre>
-        </div>}
+      {tabContent}
     </section>
   )
 }
