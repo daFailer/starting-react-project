@@ -1,6 +1,8 @@
 import { getRandomInt } from '../numbers';
 import reactLogo from '../assets/react-core-concepts.png';
 
+import './Header.scss';
+
 const reactDescriptions: string[] = [
   'Core',
   'Crucial',

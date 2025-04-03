@@ -3,6 +3,8 @@ import jsxImg from '../assets/jsx-ui.png';
 import configImg from '../assets/config.png';
 import stateImg from '../assets/state-mgmt.png';
 
+import './CoreConcept.scss';
+
 function CoreConceptItem({title, imagePath, description}: {title: string, imagePath?: string, description: string}) {
   return (
     <li>
