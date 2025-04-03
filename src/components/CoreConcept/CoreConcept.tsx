@@ -43,12 +43,12 @@ export default function CoreConcept() {
     <section id="core-concepts">
       <h2>Core Concept</h2>
       <ul>
-        {coreConcepts.map((item) => (
+        {coreConcepts.map((item, index) => 
           <CoreConceptItem
-            key={`${item.title} ${item.description}`}
+            key={`${item.title}-${index}`}
             {...item}
           />
-        ))}
+        )}
       </ul>
   </section>
   );
