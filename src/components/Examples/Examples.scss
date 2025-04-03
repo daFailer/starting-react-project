@@ -11,27 +11,20 @@
     display: flex;
     gap: 0.5rem;
     list-style: none;
+  }
 
-    button {
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 6px;
-      background-color: transparent;
-      color: #a18aba;
-      font-family: 'Roboto Condensed', sans-serif;
+  #tab-content{
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: #2f1d43;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    
+    h3 {
+      margin: 0;
+    }
+    
+    code {
       font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-      
-      &:hover {
-        background-color: #1b082f;
-        color: #ebe7ef;
-      }
-      
-      &.active {
-        background-color: #7925d3;
-        color: #ebe7ef;
-      }
     }
   }
 }

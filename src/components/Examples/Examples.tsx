@@ -86,7 +86,13 @@ export default function Examples() {
       <h2>Examples</h2>
       <menu>
         {buttonConfig.map((item, index) => (
-          <TabButton key={item.title} onSelect={() => handleSelect(index)}>{item.title}</TabButton>
+          <TabButton
+            key={item.title}
+            onSelect={() => handleSelect(index)}
+            isActive={currentSelection === index}
+          >
+            {item.title}
+          </TabButton>
         ))}
       </menu>
       {tabContent}
